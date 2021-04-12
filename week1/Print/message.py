@@ -1,5 +1,8 @@
-msg1 = ("I love python")
-print(msg1)
+firstMsg = ("I love python")
+print(firstMsg)
 
-txt = ("test")
-print(txt)
+secondMsg = ("Object-Oriented Programming & the Web - Python & Django")
+print(secondMsg)
+
+thirdMsg = ("Let's learn this!")
+print(thirdMsg)
