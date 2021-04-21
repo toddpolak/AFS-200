@@ -1,7 +1,8 @@
 class user():
     def userInfo(self):
-        name = input("Enter your name: ")
-        print("Hello, " + name.upper())
+        fName = input("Enter your first name: ")
+        lName = input("Enter your last name: ")
+        print("Hello, " + fName.upper() + " " + lName.upper())
 
 def getUserInfo():
     curUser = user()
