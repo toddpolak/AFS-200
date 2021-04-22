@@ -7,7 +7,7 @@ def oddOrEven(val):
         print("you entered an odd number.")
 
 def multOfFour(val):
-    if(int(val) % 4 ==0):
+    if(int(val) % 4 == 0):
         return True
     return False
 
