@@ -1,5 +1,3 @@
-num = input("Enter a number: ")
-
 def oddOrEven(val):
     if(int(val) % 2 == 0):
         print("You entered an even number.")
@@ -16,6 +14,8 @@ def evenDiv(val1, val2):
         print(val2 + " divides evently into " + val1)
     else:
         print(val2 + " does not divide evently into " + val1)
+
+num = input("Enter a number: ")
 
 if(multOfFour(num)):
     print("Your number is a multiple of 4.")
