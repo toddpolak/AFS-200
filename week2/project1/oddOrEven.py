@@ -15,14 +15,17 @@ def evenDiv(val1, val2):
     else:
         print(val2 + " does not divide evently into " + val1)
 
-num = input("Enter a number: ")
+def project1():
+    num = input("Enter a number: ")
 
-if(multOfFour(num)):
-    print("Your number is a multiple of 4.")
-else:
-    oddOrEven(num)
+    if(multOfFour(num)):
+        print(num + " is a multiple of 4.")
+    else:
+        oddOrEven(num)
 
-num = input("Enter a number: ")
-check = input("Enter a second number: ")
+    num = input("Enter a number: ")
+    check = input("Enter a second number: ")
 
-evenDiv(num, check)
+    evenDiv(num, check)
+
+project1()
