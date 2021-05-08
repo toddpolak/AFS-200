@@ -10,7 +10,7 @@ player_name = input('Enter your name: ')
 
 print('Hi, {}.'.format(player_name))
 
-player_input = input('Hit any key to begin. To quit any time, type "exit" ')
+player_input = input('Press Enter to begin. To quit any time, type "exit" ')
 
 while player_input.lower() != 'exit':
     try:
