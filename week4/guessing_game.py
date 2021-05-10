@@ -19,14 +19,10 @@ def show_attempts(val):
         print('You did it in 1 attempt!\n')
 
 attempts_list = []
-
 num_range = 9
-
 random_numnber = int(random.randint(1, int(num_range)))
-
-game_started = False
-
 attempts = 0
+game_started = False
 
 print('\n\n')
 print('###########################################')
@@ -86,7 +82,7 @@ while player_input.lower() != 'exit':
             break
 
         print('Invalid entry! ')
-        
+
         player_input = input('\nEnter a number between 1 and ' + str(num_range) + ': ')
 else:
     show_score()
