@@ -25,10 +25,14 @@ num_range = 9
 
 random_numnber = int(random.randint(1, int(num_range)))
 
+game_started = False
+
+print(random_numnber)
+
 print('\n\n')
-print('#####################################################')
-print('*************** Number Guessing Game ****************')
-print('#####################################################')
+print('###########################################')
+print('********** Number Guessing Game ***********')
+print('###########################################')
 
 player_name = input('\nEnter your name: ')
 
@@ -39,12 +43,16 @@ player_input = input('Press Enter to begin. To quit any time, type "exit" ')
 attempts = 0
 
 while player_input.lower() != 'exit':
+
     try:
-        player_input = input('\nPick a number between 1 and ' + str(num_range) + ': ')
+
+        if(not game_started):
+            player_input = input('\nEnter a number between 1 and ' + str(num_range) + ': ')
+
+            game_started = True
 
         if int(player_input) < 1 or int(player_input) > int(num_range):
-            print('Please enter a number between 1 and ' + str(num_range) + ' only ... ')
-            continue
+            player_input = input('Please enter a number between 1 and ' + str(num_range) + ': ')
 
         if player_input.lower() == 'exit':
             break
@@ -64,15 +72,17 @@ while player_input.lower() != 'exit':
 
             print('Let''s play again ... \n')
 
+            game_started = False
+
             continue
 
         elif int(player_input) > random_numnber:
-            print('Guess lower .. ')
+            player_input = input('Guess lower .. ')
 
             attempts += 1
 
         elif int(player_input) < random_numnber:
-            print('Guess higher .. ')
+            player_input = input('Guess higher .. ')
 
             attempts += 1
 
@@ -81,7 +91,6 @@ while player_input.lower() != 'exit':
             show_score()
             break
 
-        print('Invalid entry ... ')
+        player_input = input('Invalid entry!')
 else:
     show_score()
-    
