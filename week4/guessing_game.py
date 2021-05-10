@@ -1,7 +1,6 @@
 import random
 
 def show_score():
-
     print('###########################################')
 
     if len(attempts_list) > 0:
@@ -27,6 +26,8 @@ random_numnber = int(random.randint(1, int(num_range)))
 
 game_started = False
 
+attempts = 0
+
 print('\n\n')
 print('###########################################')
 print('********** Number Guessing Game ***********')
@@ -38,8 +39,6 @@ print('Hi, {}.'.format(player_name) +'\n')
 
 player_input = input('Press Enter to begin. To quit any time, type "exit" ')
 
-attempts = 0
-
 while player_input.lower() != 'exit':
     try:
         if(not game_started):
@@ -49,7 +48,9 @@ while player_input.lower() != 'exit':
 
         if int(player_input) < 1 or int(player_input) > int(num_range):
             print('That number is out of the range.')
+
             player_input = input('\nPlease enter a number between 1 and ' + str(num_range) + ': ')
+
             continue
 
         if player_input.lower() == 'exit':
@@ -59,18 +60,13 @@ while player_input.lower() != 'exit':
             print('You guessed it!')
 
             attempts += 1
-
             attempts_list.append(attempts)
-
             show_attempts(attempts)
-
             random_numnber = int(random.randint(1, int(num_range)))
-
             attempts = 0
+            game_started = False
 
             print('Let''s play again ... \n')
-
-            game_started = False
 
             continue
 
@@ -90,6 +86,7 @@ while player_input.lower() != 'exit':
             break
 
         print('Invalid entry! ')
+        
         player_input = input('\nEnter a number between 1 and ' + str(num_range) + ': ')
 else:
     show_score()
