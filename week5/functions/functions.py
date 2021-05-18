@@ -10,4 +10,4 @@ def calculateCase(word):
         
     print('Upper Case: ' + str(uCase) + '\nLower Case: ' + str(lCase))
 
-calculateCase('Learning Python is Fun')
+calculateCase('Learning Python is a lot of fun. I enjoy it!')
