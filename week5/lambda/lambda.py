@@ -2,7 +2,7 @@
 
 #Option 1
 
-multiplier = 360
+multiplier = 6
 
 multiply = lambda x: x * multiplier
 
