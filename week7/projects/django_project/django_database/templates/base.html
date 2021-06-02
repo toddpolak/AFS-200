@@ -29,39 +29,6 @@ http://www.templatemo.com/tm-475-holiday
   </head>
   <body class="tm-gray-bg">
 
-  	<!-- Header -->
-  	<div class="tm-header">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
-                  <a href="#" class="tm-site-name">My Travel App</a>
-                  {% if user.is_authenticated %}
-                    <span style="color: white">Hello, {{user.first_name}}</span>
-                  {% endif %}
-              </div>
-              <div class="col-lg-6 col-md-8 col-sm-9">
-                  <div class="mobile-menu-icon">
-                  <i class="fa fa-bars"></i>
-                </div>
-                  <nav class="tm-nav">
-                    <ul>
-                        <li><a href="" class="active">Home</a></li>
-
-                        {% if user.is_authenticated %}
-                          <li><a href="accounts/logout">Logout</a></li>
-                        {% else %}
-                          <li><a href="accounts/register">Register</a></li>
-                          <li><a href="accounts/login">Login</a></li>
-                        {% endif %}
-
-                        <li><a href="tours.html">Our Tours</a></li>
-                    </ul>
-                </nav>		
-              </div>				
-          </div>
-      </div>	  	
-    </div>
-
     {% block content %}
 
     {% endblock %}
@@ -69,7 +36,7 @@ http://www.templatemo.com/tm-475-holiday
     <footer class="tm-black-bg">
         <div class="container">
             <div class="row">
-                <p class="tm-copyright-text">Copyright &copy; 2084 Your Company Name</p>
+                <p class="tm-copyright-text">Copyright &copy; 2021 My Travel Company</p>
             </div>
         </div>		
     </footer>
